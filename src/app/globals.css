@@ -2,26 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.menu-item {
+  @apply text-sm font-normal text-[#171717] px-4 py-3 hover:bg-gray-100 box-border;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.menu-item-active {
+  @apply text-sm font-medium text-[#171717] px-4 py-3 border-b-2 border-[#171717] box-border;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  color: #171717;
 }
