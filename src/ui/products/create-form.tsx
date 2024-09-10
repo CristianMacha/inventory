@@ -1,6 +1,7 @@
 'use client'
 import { createProduct, State } from "@/lib/actions";
 import { Category } from "@/lib/definitions";
+import Link from "next/link";
 import { useFormState } from "react-dom";
 
 export default function CreateProductForm({ categories }: { categories: Category[] }) {
@@ -69,7 +70,7 @@ export default function CreateProductForm({ categories }: { categories: Category
                 </div>
             </div>
             <div className="flex flex-col md:flex-row gap-2 md:gap-1">
-                <button type="button" className="px-4 py-2 rounded-md border">Cancelar</button>
+                <Link href={'/products'} className="px-4 py-2 rounded-md border text-center">Cancelar</Link>
                 <button type="submit" className="px-4 py-2 rounded-md bg-gray-900 text-gray-50 hover:bg-gray-800">Guardar</button>
             </div>
         </form>
